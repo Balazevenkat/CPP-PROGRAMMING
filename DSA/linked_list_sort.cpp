@@ -1,0 +1,115 @@
+#include<iostream>
+#include<cstdlib>
+#include<ctime>
+using namespace std;
+
+typedef struct node
+{
+    int  data;
+    struct node *next;
+}NODE;
+NODE *head=nullptr;
+
+
+NODE *create_node(int val)
+{
+    NODE *newnode=new NODE;
+    
+    newnode->data=val;
+    newnode->next=nullptr;
+    
+    return newnode;
+}
+
+void insert_at_end(int val)
+{
+    NODE *node=create_node(val);
+    
+    if(head==nullptr)
+    {
+        cout<<"first node.."<<endl;
+        node->next=head;
+        head=node;
+        cout<<endl;
+        return;
+    }
+    
+    NODE *tem=head;
+    
+    while((tem->next)!=nullptr)
+    {
+        tem=tem->next;
+    }
+    tem->next=node;
+}
+
+void sort_order()
+{
+    NODE *ptr=head;//starting 
+    NODE *lptr=nullptr;//every sorted number moved end
+    
+    int tem,swap;
+    do
+    {
+        swap=0;//flag to terminate
+        NODE *ptr = head;//reseting the ptr to head swaped check
+        while(ptr->next!=lptr)//ptr->next imp to avoid long forward checking
+        {
+            if(ptr->data > ptr->next->data)
+            {
+                tem=ptr->data;
+                ptr->data=ptr->next->data;
+                ptr->next->data=tem;
+                swap=1;
+            }
+            ptr=ptr->next;
+        }
+        lptr=ptr;
+    }while(swap);
+    
+}
+
+void display_node()
+{
+    NODE *tem=nullptr;
+    
+    tem=head;
+    
+    if(tem==nullptr)
+    {
+        cout<<"list is empty..."<<endl;
+        return ;
+    }
+    while((tem)!=nullptr)
+    {
+        cout<<tem->data<<"->";
+        tem=tem->next;
+    }
+    cout<<"NULL"<<endl;
+}
+int main()
+{
+    int arr[5];
+    int i,j;
+    
+    srand(time(nullptr));
+    
+    for(i=0;i<5;i++)
+      arr[i]=rand()%(50-20+1)+20;
+      
+    for(i=0;i<5;i++)
+      cout<<arr[i]<<" ";
+      
+      cout<<endl;
+      
+      for(i=0;i<5;i++)
+      insert_at_end(arr[i]);
+      
+      display_node();
+      
+      sort_order();
+      
+      cout<<endl;
+      display_node();
+      
+}
