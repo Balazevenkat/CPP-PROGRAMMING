@@ -1,6 +1,7 @@
 # CPP-PROGRAMMING
 This repository contains C++ programs written to strengthen my programming fundamentals and prepare for embedded systems development.
-Purpose
+
+# Purpose
 The main objectives of this repository are to:
 
 Build a strong foundation in modern C++ (C++11–C++20)
