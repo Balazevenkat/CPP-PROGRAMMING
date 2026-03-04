@@ -48,7 +48,7 @@ int main()
     cout<<arr[i]<<" ";
     
     
-    find_hig_shig(&arr[0]);
+    find_hig_shig(&arr[0]);//find_hig_shig(arr);
     
     return 0;
 }
