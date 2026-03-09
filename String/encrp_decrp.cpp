@@ -21,8 +21,8 @@ int main()
     
     for(char c:msg)
     {
-        size_t postion=alpha.find(c);
-        if(postion!=string::npos)
+        size_t postion=alpha.find(c);//form msg string each char checks the with alpha
+        if(postion!=string::npos)//npos alpha postion string till end
         {
             char new_c=key.at(postion);
             decrpt+=new_c;
