@@ -22,6 +22,10 @@ int main()
             cout<<letters.at(i);
         }
         cout<<c;
+        /*  for(int i=pos-1;i>=0;i--)
+        {
+            cout<<letters.at(i);
+        }*/
         cout<<endl;
         pos++;
     }
