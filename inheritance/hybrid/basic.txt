@@ -1,0 +1,52 @@
+1️⃣ Structure Explanation (Short)
+
+Student → Base class
+
+ECE and Sports → Derived from Student (Hierarchical inheritance)
+
+Both inherit using virtual public Student to avoid duplicate copies
+
+Result → Inherits from ECE and Sports (Multiple inheritance)
+
+So the overall design becomes Hybrid inheritance.
+
+2️⃣ Diagram
+        Student
+        /    \
+   (virtual) (virtual)
+      ECE      Sports
+        \      /
+         \    /
+          Result
+3️⃣ Why virtual is Used
+
+Without virtual:
+
+Student
+   ↑      ↑
+  ECE    Sports
+     \  /
+     Result
+
+Result would contain two copies of Student (diamond problem).
+
+Using:
+
+class ECE : virtual public Student
+class Sports : virtual public Student
+
+Only one shared Student object exists.
+
+4️⃣ Final Concept
+Student → base class
+ECE, Sports → hierarchical inheritance
+Result → multiple inheritance
+Overall → hybrid inheritance
+Virtual → avoids diamond problem
+
+✅ One-line memory trick
+
+Student → shared base
+ECE & Sports → hierarchical
+Result → multiple
+Total structure → hybrid inheritance
