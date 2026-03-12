@@ -1,0 +1,39 @@
+1️⃣ Single Inheritance
+A
+|
+B
+2️⃣ Multilevel Inheritance
+A
+|
+B
+|
+C
+3️⃣ Multiple Inheritance
+A   B
+ \ /
+  C
+4️⃣ Hierarchical Inheritance
+    A
+   / \
+  B   C
+5️⃣ Hybrid Inheritance
+    A
+   / \
+  B   C
+   \ /
+    D
+6️⃣ Diamond Problem (Hybrid Case)
+    A
+   / \
+  B   C
+   \ /
+    D
+
+✅ Quick memory trick
+
+Single        → A → B
+Multilevel    → A → B → C
+Multiple      → A,B → C
+Hierarchical  → A → B,C
+Hybrid        → Combination
+Diamond       → Hybrid special case
