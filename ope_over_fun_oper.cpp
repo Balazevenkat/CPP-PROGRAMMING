@@ -21,7 +21,7 @@ using namespace std;
    }
     int operator==(test a)
     {
-        if(a.x==x)
+        if(a.x==x)//here indirectly the this is object in (C++) fetches to place in x postion
         return 1;
         else
         return 0;
