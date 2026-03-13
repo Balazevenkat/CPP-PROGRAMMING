@@ -1,0 +1,116 @@
+Base class
+Derived class
+Virtual function
+Base pointer/reference
+
+Important Terms
+1. Early Binding
+
+Function decided during compilation.
+
+Example:
+
+Function overloading
+Operator overloading
+2. Late Binding
+
+Function decided during execution.
+
+Example:
+
+Virtual functions
+
+Real Life Example
+
+Think of remote control.
+
+Remote → TV
+Remote → AC
+Remote → Fan
+
+Same button:
+
+ON()
+
+But behavior changes depending on device.
+
+Remote → TV → TV ON
+Remote → AC → AC ON
+
+This is run-time polymorphism.
+
+1️⃣ What is Run-Time Polymorphism
+
+Polymorphism = one name, many forms
+
+Run-time polymorphism means:
+
+The function call is decided during program execution (run time), not during compilation.
+
+It is achieved using:
+
+Virtual Functions
+Base class pointer
+Derived class object
+2️⃣ Why Run-Time Polymorphism is Needed
+
+Suppose we have a base class function:
+
+class Shape
+{
+public:
+    void draw()
+    {
+        cout<<"Drawing Shape"<<endl;
+    }
+};
+
+Derived classes:
+
+class Circle : public Shape
+{
+public:
+    void draw()
+    {
+        cout<<"Drawing Circle"<<endl;
+    }
+};
+class Rectangle : public Shape
+{
+public:
+    void draw()
+    {
+        cout<<"Drawing Rectangle"<<endl;
+    }
+};
+
+Now:
+
+Shape *ptr;
+Circle c;
+
+ptr = &c;
+ptr->draw();
+
+Output:
+
+Drawing Shape
+
+Why?
+Because base pointer calls base function.
+
+This is not polymorphism yet.
+
+3️⃣ Introducing Virtual Function
+
+If we write:
+
+virtual void draw()
+
+Then the compiler waits until run time to decide which function to call.
+
+Example:
+
+
+
+
