@@ -1,0 +1,63 @@
+The base class only declares the function name and forces derived classes to define their own version.
+
+Example:
+
+class shape
+{
+public:
+    virtual void draw() = 0;
+};
+
+Derived class:
+
+class circle : public shape
+{
+public:
+    void draw()
+    {
+        cout<<"Drawing circle"<<endl;
+    }
+};
+3️⃣ Important Rule
+
+If a class contains a pure virtual function, it becomes an:
+
+Abstract Class
+
+And:
+
+Objects cannot be created for that class
+
+Example:
+
+❌ Not allowed
+
+shape s;
+
+✔ Allowed
+
+Virtual function → optional override
+Pure virtual function → mandatory override
+8️⃣ Interview Definition (Best)
+
+A pure virtual function is a virtual function declared with =0 in a base class that forces derived classes to implement the function, making the base class abstract.
+
+
+
+  pure virtual function class doesn't require objects like shape obj, but we can use shape *ptr to provide interface to derived classes.
+
+
+
+          shape (abstract class)
+             |
+        draw() = 0
+             |
+      ----------------
+      |              |
+   circle         square
+   draw()          draw()
+
+
+  A class containing a pure virtual function cannot create objects, but a pointer of that class can be used to refer to derived class objects and provide a common interface.
+
+circle c;
