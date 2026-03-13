@@ -1,0 +1,18 @@
+Operators that cannot be overloaded
+::   scope resolution
+.    member access
+.*   
+?:   
+sizeof
+
+Definition
+
+Operator Overloading means giving additional meaning to an operator for user-defined types (classes).
+
+Example operators:
+
++  -  *  /  ==  <  >
+
+mutable allows modification even inside const objects.
+
+check directory below in CPP all opera_overloadding
