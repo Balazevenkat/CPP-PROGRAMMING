@@ -1,3 +1,4 @@
+//A template allows writing generic code so the same class or function can work with different data types without rewriting it.
 #include<iostream>
 #include<cstdlib>
 using namespace std;
