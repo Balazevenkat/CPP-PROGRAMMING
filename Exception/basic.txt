@@ -1,0 +1,32 @@
+What is an Exception?
+
+An exception is a runtime error that occurs during program execution.
+
+Examples:
+
+division by zero
+invalid input
+file not found
+memory allocation failure
+
+Normally a program crashes when such errors occur.
+
+Exception handling allows us to handle errors without crashing the program.
+
+
+ Exception Handling Mechanism
+
+C++ uses three keywords:
+
+try
+throw
+catch
+Structure
+try
+{
+    // risky code
+}
+catch(type variable)
+{
+    // error handling code
+}
