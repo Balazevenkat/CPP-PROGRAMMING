@@ -1,0 +1,12 @@
+ int *arr=nullptr;
+
+arr=(int*)malloc(size*sizeof(int));
+
+c style in c++
+
+in c++ style 
+
+arr= new int[size];
+
+  cout<<*(arr+j)<<" ";
+  cout<<arr[j]<<" ";
