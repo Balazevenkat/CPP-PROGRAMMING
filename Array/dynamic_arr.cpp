@@ -1,3 +1,16 @@
+//c
+/*int *arr;
+    int size;
+
+    printf("Enter size: ");
+    scanf("%d",&size);
+
+    arr = (int*)malloc(size * sizeof(int));   // dynamic allocation
+    
+    */
+
+
+
 #include<iostream>
 #include<cstdlib>
 using namespace std;
