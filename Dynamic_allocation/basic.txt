@@ -10,3 +10,13 @@ arr= new int[size];
 
   cout<<*(arr+j)<<" ";
   cout<<arr[j]<<" ";
+
+
+******************************************
+  int *ptr=NULL;
+    ptr=new int;//allocate memory 4 bytes in heap
+    cout<<"Enter a Number :"<<endl;
+    cin>>*ptr;
+    cout<<"Value is :"<<*ptr<<endl;
+    delete ptr;//de allocate memory 4 bytes in heap
+    ptr=NULL;//ptr=NULL to avoid dangling pointer
