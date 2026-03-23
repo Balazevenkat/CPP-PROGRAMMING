@@ -46,6 +46,8 @@ A pure virtual function is a virtual function declared with =0 in a base class t
 
   pure virtual function class doesn't require objects like shape obj, but we can use shape *ptr to provide interface to derived classes.
 
+//we can creat obj in normal virtual 
+//we can't create the obj for pure virtual function
 
 
           shape (abstract class)
