@@ -1,0 +1,90 @@
+1. Single Inheritance:
+   Base → Derived
+
+2. Multilevel:
+   Grandparent → Parent → Child
+
+3. Multiple:
+   Order of appearance in inheritance list
+   (A, then B, then Child)
+
+4. Virtual Inheritance:
+   Virtual base class ALWAYS constructed first,
+   then other bases (left → right),
+   then derived.
+
+5. Hierarchical:
+   Base → Each child (separately) 
+
+
+1 #include <iostream>
+using namespace std;
+
+class A {
+public:
+    A(){ cout<<"A (virtual base) ctor\n"; }
+};
+
+class B : virtual public A {
+public:
+    B(){ cout<<"B ctor\n"; }
+};
+
+class C : virtual public A {
+public:
+    C(){ cout<<"C ctor\n"; }
+};
+
+class D : public B, public C {
+public:
+    D(){ cout<<"D ctor\n"; }
+};
+
+int main() {
+    D obj;
+}
+Output:
+A (virtual base) ctor
+B ctor
+C ctor
+D ctor
+
+👉 Even though B comes before C in class D : public B, public C,
+the virtual base A is ALWAYS constructed first.
+
+
+
+#include <iostream>
+using namespace std;
+
+class A {
+public:
+    A(){ cout<<"A (virtual base) ctor\n"; }
+};
+
+class B : virtual public A {
+public:
+    B(){ cout<<"B ctor\n"; }
+};
+
+class C : virtual public A {
+public:
+    C(){ cout<<"C ctor\n"; }
+};
+
+class D : public B, public C {
+public:
+    D(){ cout<<"D ctor\n"; }
+};
+
+int main() {
+    D obj;
+}
+Output:
+A (virtual base) ctor
+B ctor
+C ctor
+D ctor
+
+👉 Even though B comes before C in class D : public B, public C,
+the virtual base A is ALWAYS constructed first.
