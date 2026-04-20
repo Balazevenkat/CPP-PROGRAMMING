@@ -1,0 +1,29 @@
+A lambda function is a short, anonymous (unnamed) function defined inside code, mainly used for inline operations, especially with STL, and it can capture external variables.
+
+🔹 What is SAME as normal function?
+
+✔️ Takes parameters
+✔️ Returns value
+✔️ Can be called like a function
+
+🔹 What is DIFFERENT?
+
+👉 Lambda:
+
+Has no name
+Written inline (inside function)
+Uses capture list [ ]
+Mostly used with STL algorithms
+
+What is Capture List?
+[] (parameters) { body }
+
+👉 The [] is called the capture list
+👉 It controls how outside variables are used inside lambda
+
+🔹 Why Capture List?
+
+👉 Lambda has its own scope
+👉 It cannot access external variables directly unless captured
+
+
