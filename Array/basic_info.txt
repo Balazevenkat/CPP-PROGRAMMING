@@ -1,0 +1,6 @@
+// new/delete example
+MyClass obj = new MyClass(); // constructor called
+delete obj; // destructor called
+// malloc/free example
+MyClass* obj = (MyClass*)malloc(sizeof(MyClass)); // NO constructor
+free(obj); // NO destructor
