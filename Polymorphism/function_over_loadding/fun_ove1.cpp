@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+
 int Add(int a,int b){
     cout<<"int,int"<<endl;
     return a+b;
@@ -12,6 +13,7 @@ double Add(double a,double b){
     cout<<"double,double"<<endl;
     return a+b;
 }
+
 int main(){
     cout<<Add(10,20)<<endl;
     cout<<Add(1.2f,2.2f)<<endl;
