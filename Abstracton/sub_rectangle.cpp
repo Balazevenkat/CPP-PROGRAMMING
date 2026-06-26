@@ -1,3 +1,5 @@
+
+
 class Rectangle : public Shape{
 	float len,bre;
 	public : Rectangle(){
