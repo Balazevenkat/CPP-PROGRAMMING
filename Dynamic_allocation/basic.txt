@@ -1,4 +1,5 @@
- int *arr=nullptr;
+
+int *arr=nullptr;
 
 arr=(int*)malloc(size*sizeof(int));
 
