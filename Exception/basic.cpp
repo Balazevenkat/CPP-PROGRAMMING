@@ -1,3 +1,5 @@
+
+
 throw 10      → catch(int x)
 throw 5.5     → catch(double x)
 throw 'A'     → catch(char x)
