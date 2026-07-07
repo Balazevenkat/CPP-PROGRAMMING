@@ -14,6 +14,7 @@ class Shape{
             cout<<"Area : "<<area<<endl;
             cout<<"Peri : "<<peri<<endl;
         }
+
         virtual void Whomi(){
             cout<<"I am Shape class "<<endl;
         }
