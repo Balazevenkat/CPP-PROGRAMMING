@@ -13,7 +13,7 @@ NODE *head=nullptr;
 
 NODE *create_node(int val)
 {
-    NODE *newnode=new NODE;
+    NODE *newnode=new NODE;// c style malloc also we can use
     
     newnode->data=val;
     newnode->next=nullptr;
