@@ -1,0 +1,79 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define ull unsigned long long
+#define ld long double
+#define pb push_back
+#define ppb pop_back
+#define ff first
+#define ss second
+#define all(x) (x).begin(), (x).end()
+#define rall(x) (x).rbegin(), (x).rend()
+#define sz(x) (int)(x).size()
+
+const int MOD = 1e9 + 7;
+const ll INF = 1e18;
+
+void solve() {
+    // Write your solution here
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t = 1;
+    cin >> t;
+    while (t--) solve();
+
+    return 0;
+}
+
+Common shortcuts
+vector<int> v;
+v.pb(10);
+
+sort(all(v));
+sort(rall(v));
+
+pair<int,int> p = {1,2};
+cout << p.ff << " " << p.ss;
+
+ll x = 1000000000000LL;
+
+Useful built-in functions
+__builtin_popcount(n);      // Count set bits (int)
+__builtin_popcountll(n);    // Count set bits (long long)
+__builtin_ctz(n);           // Trailing zeros
+__builtin_clz(n);           // Leading zeros
+
+gcd(a, b);
+lcm(a, b);
+
+reverse(all(v));
+max_element(all(v));
+min_element(all(v));
+
+lower_bound(all(v), x);
+upper_bound(all(v), x);
+
+binary_search(all(v), x);
+
+Fast loops
+for (int i = 0; i < n; i++) { }
+
+for (auto &x : v) {
+    cin >> x;
+}
+
+for (auto x : v) {
+    cout << x << " ";
+}
+
+Bit tricks
+if (n & 1)        // Odd
+n << 1            // ×2
+n >> 1            // ÷2
+n & (n - 1)       // Remove lowest set bit
+(n & (n - 1))==0  // Power of 2
