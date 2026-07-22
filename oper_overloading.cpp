@@ -3,7 +3,7 @@ Internally the compiler converts it to:
 t1.operator+(t2)
 
 So inside the function:
-
+this is hiden pointer
 this object = t1
 parameter a = t2
 
